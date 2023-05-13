@@ -1,21 +1,22 @@
-﻿namespace VersioningAPISample.Controllers;
+﻿namespace VersioningAPISample.Controllers.v1;
 
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [ApiController]
+[ApiVersion("1.0")]
 public class UsersController : ControllerBase
 {
     // GET: api/Users
     [HttpGet]
     public IEnumerable<string> Get()
     {
-        return new string[] { "value1", "value2" };
+        return new string[] { "Version 1 Value 1", "Version 1 Value 2" };
     }
 
     // GET api/Users/5
     [HttpGet("{id}")]
     public string Get(int id)
     {
-        return "value";
+        return $"Version 1 Value {id}";
     }
 
     // POST api/Users
