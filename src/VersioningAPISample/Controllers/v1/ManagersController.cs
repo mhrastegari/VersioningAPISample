@@ -1,37 +1,37 @@
-﻿namespace VersioningAPISample.Controllers.v2;
+﻿namespace VersioningAPISample.Controllers.v1;
 
 [Route("api/v{version:apiVersion}/[controller]")]
 [ApiController]
-[ApiVersion("2.0")]
-public class UsersController : ControllerBase
+[ApiVersion("1.0")]
+public class ManagersController : ControllerBase
 {
-    // GET: api/Users
+    // GET: api/Managers
     [HttpGet]
     public IEnumerable<string> Get()
     {
-        return new string[] { "Version 2 User 1", "Version 2 User 2" };
+        return new string[] { "Manager 1", "Manager 2" };
     }
 
-    // GET api/Users/5
+    // GET api/Managers/5
     [HttpGet("{id}")]
     public string Get(int id)
     {
-        return $"Version 2 User {id}";
+        return $"Manager {id}";
     }
 
-    // POST api/Users
+    // POST api/Managers
     [HttpPost]
     public void Post([FromBody] string value)
     {
     }
 
-    // PUT api/Users/5
+    // PUT api/Managers/5
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] string value)
     {
     }
 
-    // DELETE api/Users/5
+    // DELETE api/Managers/5
     [HttpDelete("{id}")]
     public void Delete(int id)
     {

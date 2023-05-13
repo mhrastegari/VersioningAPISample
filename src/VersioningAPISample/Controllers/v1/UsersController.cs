@@ -9,14 +9,14 @@ public class UsersController : ControllerBase
     [HttpGet]
     public IEnumerable<string> Get()
     {
-        return new string[] { "Version 1 Value 1", "Version 1 Value 2" };
+        return new string[] { "Version 1 User 1", "Version 1 User 2" };
     }
 
     // GET api/Users/5
     [HttpGet("{id}")]
     public string Get(int id)
     {
-        return $"Version 1 Value {id}";
+        return $"Version 1 User {id}";
     }
 
     // POST api/Users
