@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo()
     {
         Version = "v1",
-        Title = $"{title} v1",
+        Title = $"{title} v1 (deprecated)",
         Description = description,
         TermsOfService = terms,
         License = license,
@@ -46,7 +46,7 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddApiVersioning(options =>
 {
     options.AssumeDefaultVersionWhenUnspecified = true;
-    options.DefaultApiVersion = new(1, 0);
+    options.DefaultApiVersion = new(2, 0);
     options.ReportApiVersions = true;
 });
 
